@@ -1,0 +1,171 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+font-size: 62.5%;
+}
+
+body header.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    z-index: 2;
+    background-color: #2a201c;
+}
+a.logo img{
+    width: 100px;
+}
+nav.navBar div#close{
+    display: none;
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    cursor: pointer;
+    color: white;
+}
+nav.navBar a{
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+header.header div#menu{
+    cursor: pointer;
+    color: white;
+    font-size: 2.5rem;
+    display: none;
+}
+nav.navBar a:hover{
+    color: #d3ad7f;
+}
+body section.home{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: #2a201c;
+    flex-wrap: wrap;
+}
+section.home div.content{
+    padding-top: 6.5rem;
+    flex: 1 1 40rem;
+}
+div.content h1.title{
+    font-size: 5rem;
+    color: white;
+    text-transform: uppercase;
+}
+h1.title span{
+    text-transform: uppercase;
+    color: #d3ad7f;
+}
+div.content p.discription{
+    font-size: 2rem;
+    line-height: 1.8;
+    font-weight: lighter;
+    padding: 1rem 0;
+    color: white;  
+}
+div.content a.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    background-color: #d3ad7f;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 5px;
+}
+div.content a.btn:hover{
+    letter-spacing: 0.2rem;
+}
+section.home div.image{
+    flex: 1 1 40rem;
+}
+div.imgae img{
+    width: 100%;
+}
+
+@media(max-width:991px){
+    html{
+        font-size:55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding:2rem;
+    }
+}
+
+@media(max-width:768px){
+    header.header div#menu{
+        display: inline-block;
+    }
+    nav.navBar{
+        position: fixed;
+        top: 0;
+        right: -105%;
+        width: 30rem;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(50px);
+        transition: 0.5px;
+        height: 100vh;
+        display: flex;
+        flex-flow:column;
+        justify-content: center;
+        z-index: 1200;
+    }
+
+    nav.navBar.active{
+        right: 0;
+    }
+
+    nav.navBar div#close{
+        display: block;
+    }
+
+    nav.navBar a{
+        display: block;
+        text-align: center;
+        font-size: 3rem;
+        margin: 1rem 0;
+    }
+
+    section.home div.content{
+        padding-top: 15rem; 
+    }
+
+    div.content h1.title{
+        font-size: 4rem;
+    }
+
+    div.content p.discription{
+        font-size: 1.6rem
+    }
+    section.home div.image{
+        width: 368px;
+        background-color: red;
+    }
+
+    div.image img{
+        width: 100%;
+    }
+
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 55%;
+    }
+}
